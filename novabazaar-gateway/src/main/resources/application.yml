@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: test_route
+          uri: https://www.google.com/
+          predicates:
+            - Query=url, google
+
+        - id: ins_route
+          uri: https://www.instagram.com/
+          predicates:
+            - Query=url, instagram

@@ -15,6 +15,10 @@
 		<module>novabazaar-order</module>
 		<module>novabazaar-member</module>
 		<module>novabazaar-coupon</module>
+		<module>renren-fast</module>
+		<module>renren-generator</module>
+		<module>novabazaar-common</module>
+		<module>novabazaar-gateway</module>
 	</modules>
 
 
