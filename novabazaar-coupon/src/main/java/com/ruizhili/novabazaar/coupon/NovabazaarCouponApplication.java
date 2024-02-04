@@ -52,8 +52,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  *
  */
 
-@EnableDiscoveryClient
 @MapperScan("com/ruizhili/novabazaar/coupon/dao")
+@EnableDiscoveryClient
 @SpringBootApplication
 public class NovabazaarCouponApplication {
 

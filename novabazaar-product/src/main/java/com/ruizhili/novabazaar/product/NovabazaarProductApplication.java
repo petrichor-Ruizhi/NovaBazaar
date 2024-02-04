@@ -1,11 +1,10 @@
 package com.ruizhili.novabazaar.product;
 
-import com.ruizhili.novabazaar.product.service.BrandService;
 import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
 
 /**
  *   1. 整合MyBatis-plus
@@ -19,8 +18,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  *   		2. 告诉MyBatis-plus：sql映射文件的位置
  */
 
-@EnableDiscoveryClient
 @MapperScan("com/ruizhili/novabazaar/product/dao")
+@EnableDiscoveryClient
 @SpringBootApplication
 public class NovabazaarProductApplication {
 
