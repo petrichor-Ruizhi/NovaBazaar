@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    alicloud:
+      access-key: mima
+      secret-key: mima
+      oss:
+        endpoint: mima
+
+  application:
+    name: novabazaar-third-party
+
+server:
+  port: 30000

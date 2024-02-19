@@ -2,6 +2,7 @@ package com.ruizhili.novabazaar.product.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
@@ -41,7 +42,9 @@ public class CategoryEntity implements Serializable {
 	private Integer catLevel;
 	/**
 	 * 是否显示[0-不显示，1显示]
+	 * 自定义逻辑删除，这样发送删除请求的时候，不会真实删除数据，而是更改showStatus中的值
 	 */
+	@TableLogic(value = "1", delval = "0")
 	private Integer showStatus;
 	/**
 	 * 排序

@@ -13,12 +13,19 @@ spring:
             - Query=url, instagram
 
         # 精确路由放在高优先级
+        - id: third_party_route
+          uri: lb://novabazaar-third-party
+          predicates:
+            - Path=/api/thirdparty/**
+          filters:
+            - RewritePath=/api/thirdparty/(?<segment>.*),/$\{segment}
+
         - id: product_route
           uri: lb://novabazaar-products
           predicates:
             - Path=/api/product/**
           filters:
-            - RewritePath=/api/(?<segment>.*),/$\{segment}
+            - RewritePath=/api/(?<segment>/?.*),/$\{segment}
 
         - id: admin_route
           uri: lb://renren-fast
